@@ -4,7 +4,7 @@ Buildless, responsive research project page inspired by the FORGE project page. 
 
 ## Project website
 
-The GitHub Pages URL will be **[ActICL project page](https://kaamava.github.io/acticl-project-page/)** once Pages is enabled and the first deployment completes. Hosting is not yet enabled.
+**[Open the ActICL project page](https://kaamava.github.io/acticl-project-page/)**
 
 ## Preview locally
 
@@ -37,6 +37,6 @@ The arXiv, Code, and Hugging Face buttons currently have empty `href` values and
 
 ## Hosting
 
-In the repository's **Settings → Pages**, choose **Deploy from a branch**, select **main** and **/docs**, and save. Future commits to `main` will update the website automatically. With the current account plan, GitHub requires this repository to be public before Pages can be enabled.
+GitHub Pages is configured to **Deploy from a branch → main → /docs**. Future commits to `main` update the website automatically after the Pages deployment completes. Keep the publishing directory set to `/docs`, where `index.html` and the website assets live.
 
 The website does not require an `.openai` directory or a build step. The previous Sites hosting metadata has been removed and `.openai/` is ignored by Git. Google Fonts are optional; the site falls back to system fonts when unavailable.

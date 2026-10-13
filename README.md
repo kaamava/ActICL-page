@@ -1,42 +1,7 @@
-# ActICL project page
+Project page for paper: **ActICL: Post-Training for Agentic Multimodal In-Context Learning**.
 
-Buildless, responsive research project page inspired by the FORGE project page. All paper content is based on the supplied `ICLR2027__Copy_.pdf` preprint (31 pages), with its four named authors.
+[Project page](https://kaamava.github.io/acticl-project-page/)
 
-## Project website
+## Abstract
 
-**[Open the ActICL project page](https://kaamava.github.io/acticl-project-page/)**
-
-## Preview locally
-
-```sh
-python3 -m http.server 4173 --directory docs
-```
-
-Open `http://localhost:4173`. No build or package installation is required. `docs/` is the complete static website. The source paper is included as `docs/assets/ActICL.pdf`.
-
-## Files
-
-- `docs/index.html`: page content, paper links, author information, and citation.
-- `docs/style.css`: visual design and responsive layouts.
-- `docs/app.js`: six-scene walkthrough, model/setting selectors, result tables, and citation copying.
-- `docs/assets/`: paper PDF, cropped original Figures 1 and 2, and vector identity assets.
-
-## Content and data provenance
-
-- Table 1, page 7: all three backbones and eight method rows, including reported averages. The bar chart displays MMICES, ContextNav, LSD, ProMSA, and the selected ActICL setting. The expanded table preserves all rows.
-- Table 3, page 8: three retrieval methods, three answering models, and three benchmarks.
-- Table 4, page 9: training-stage ablation, Qwen3.5-9B adaptive setting.
-- Figure 4, page 9: 2.8 percentage-point average drop with a fixed retrieval goal.
-- The +11.6, +4.4, +3.5 and +2.2 percentage-point aggregate claims follow the abstract/introduction. Small rounding differences can occur when recomputing from published three-decimal table values.
-- The walkthrough is an illustrative reconstruction of Figure 1, with explicit synthetic chart values. It is neither a live model nor an observed experimental trajectory.
-- Fixed-shot comparisons match demonstration counts, not compute. The page makes no token-saving claim against one-pass retrieval.
-
-There are no invented code, arXiv, author-profile, or dataset URLs. Add the actual public links when available. Citation year is the supplied preprint's current year (2026); no acceptance claim is made.
-
-The arXiv, Code, and Hugging Face buttons currently have empty `href` values and keep visitors on the same page when clicked. Add their public URLs in `docs/index.html` when ready; update both arXiv links (navigation and hero). BibTeX links to the citation section. The PDF remains in the assets folder, but the page no longer links to it.
-
-## Hosting
-
-GitHub Pages is configured to **Deploy from a branch → main → /docs**. Future commits to `main` update the website automatically after the Pages deployment completes. Keep the publishing directory set to `/docs`, where `index.html` and the website assets live.
-
-The website does not require an `.openai` directory or a build step. The previous Sites hosting metadata has been removed and `.openai/` is ignored by Git. Google Fonts are optional; the site falls back to system fonts when unavailable.
+Multimodal in-context learning (ICL) is an important capability of multimodal large language models (MLLMs). Its performance is closely tied to the demonstrations it uses. Thus, retrieving demonstrations from a given bank is a core problem in many ICL-based systems. Common methods use fixed metrics to retrieve all the demonstrations at once, which may introduce redundancy and noise. Context-aware retrieval methods have emerged to address this problem. However, none of them lets the MLLM itself learn how to judge what new demonstrations it needs through its reasoning and then carry out progressive retrieval on its own. To this end, we introduce ActICL, a framework that trains an MLLM agent to acquire and use an ICL context via tool-augmented reasoning. ActICL builds an agent that analyzes its own information gaps during iterative reasoning and tool-use actions. Based on these gaps, it performs targeted retrieval to acquire a set of initial candidates. It can then use the existing context to further filter the candidates and refine the context, or it can iteratively perform a new retrieval. When the agent judges that the context is sufficient for the task, or when the resource limit is reached with the user request met, it sends the acquired context to an answering model, either the agent itself or another MLLM. We use a two-stage post-training procedure that jointly optimizes the agent’s acquisition and answering. When the agents adaptively decide the number of demonstrations, ActICL improves average performance by 11.6 percentage points over standard similarity-based retrieval across seven benchmarks and three MLLMs, and by 4.4 points compared to the strongest prior baseline. The contexts acquired by ActICL agents can also be used effectively by frontier models. When GPT-5.6-Sol performs 4-shot ICL, ActICL’s contexts improve its performance by 3.5 points over standard retrieval, averaged over three benchmarks.

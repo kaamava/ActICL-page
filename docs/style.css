@@ -12,6 +12,7 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
 
 /* Give the larger supporting text room to wrap without clipping. */
+.authors a{text-decoration:underline;text-decoration-color:#b8a8c7;text-underline-offset:4px}
 .eyebrow,.tiny-label{letter-spacing:.1em}
 .hero-actions{flex-wrap:wrap}
 .button{min-height:46px}

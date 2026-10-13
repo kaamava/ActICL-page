@@ -1,5 +1,12 @@
 'use strict';
 
+// Leave empty resource links in place until their public URLs are available.
+document.querySelectorAll('a[data-resource]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    if (!link.getAttribute('href')?.trim()) event.preventDefault();
+  });
+});
+
 // Values transcribed from Tables 1, 3 and 4 of the supplied preprint.
 // Each Table 1 row contains seven benchmark scores followed by the reported mean.
 const experimentData = {

@@ -33,6 +33,8 @@ Open `http://localhost:4173`. No build or package installation is required. `doc
 
 There are no invented code, arXiv, author-profile, or dataset URLs. Add the actual public links when available. Citation year is the supplied preprint's current year (2026); no acceptance claim is made.
 
+The arXiv, Code, and Hugging Face buttons currently have empty `href` values and keep visitors on the same page when clicked. Add their public URLs in `docs/index.html` when ready; update both arXiv links (navigation and hero). BibTeX links to the citation section. The PDF remains in the assets folder, but the page no longer links to it.
+
 ## Hosting
 
 In the repository's **Settings → Pages**, choose **Deploy from a branch**, select **main** and **/docs**, and save. Future commits to `main` will update the website automatically. With the current account plan, GitHub requires this repository to be public before Pages can be enabled.

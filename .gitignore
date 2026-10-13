@@ -1,4 +1,5 @@
 .DS_Store
+.openai/
 .sites-runtime/
 .sites-checkout/
 node_modules/

@@ -2,20 +2,24 @@
 
 Buildless, responsive research project page inspired by the FORGE project page. All paper content is based on the supplied `ICLR2027__Copy_.pdf` preprint (31 pages), with its four named authors.
 
+## Project website
+
+The GitHub Pages URL will be **[ActICL project page](https://kaamava.github.io/acticl-project-page/)** once Pages is enabled and the first deployment completes. Hosting is not yet enabled.
+
 ## Preview locally
 
 ```sh
-python3 -m http.server 4173 --directory dist
+python3 -m http.server 4173 --directory docs
 ```
 
-Open `http://localhost:4173`. No build or package installation is required. `dist/` can also be deployed to GitHub Pages or any static host. The source paper is included as `dist/assets/ActICL.pdf`.
+Open `http://localhost:4173`. No build or package installation is required. `docs/` is the complete static website. The source paper is included as `docs/assets/ActICL.pdf`.
 
 ## Files
 
-- `dist/index.html`: page content, paper links, author information, and citation.
-- `dist/style.css`: visual design and responsive layouts.
-- `dist/app.js`: six-scene walkthrough, model/setting selectors, result tables, and citation copying.
-- `dist/assets/`: paper PDF, cropped original Figures 1 and 2, and vector identity assets.
+- `docs/index.html`: page content, paper links, author information, and citation.
+- `docs/style.css`: visual design and responsive layouts.
+- `docs/app.js`: six-scene walkthrough, model/setting selectors, result tables, and citation copying.
+- `docs/assets/`: paper PDF, cropped original Figures 1 and 2, and vector identity assets.
 
 ## Content and data provenance
 
@@ -31,4 +35,6 @@ There are no invented code, arXiv, author-profile, or dataset URLs. Add the actu
 
 ## Hosting
 
-`.openai/hosting.json` records the private Site identity. Preserve its project ID on future deployments. Google Fonts are optional; the site falls back to system fonts when unavailable.
+In the repository's **Settings → Pages**, choose **Deploy from a branch**, select **main** and **/docs**, and save. Future commits to `main` will update the website automatically. With the current account plan, GitHub requires this repository to be public before Pages can be enabled.
+
+The website does not require an `.openai` directory or a build step. The previous Sites hosting metadata has been removed and `.openai/` is ignored by Git. Google Fonts are optional; the site falls back to system fonts when unavailable.

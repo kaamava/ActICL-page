@@ -1,6 +1,6 @@
 Project page for paper: **ActICL: Post-Training for Agentic Multimodal In-Context Learning**.
 
-[Project page](https://kaamava.github.io/acticl-project-page/)
+[Project page](https://kaamava.github.io/ActICL-page/)
 
 ## Abstract
 

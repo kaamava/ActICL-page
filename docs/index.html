@@ -23,7 +23,7 @@
     <a class="brand" href="#top" aria-label="ActICL home"><img src="assets/mark.svg" width="32" height="32" alt=""><span>Act<span class="brand-light">ICL</span></span></a>
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
     <div class="nav-links" id="nav-links"><a href="#overview">Overview</a><a href="#method">Method</a><a href="#results">Results</a><a href="#citation">Citation</a></div>
-    <a class="nav-paper" data-resource="arxiv" href="">arXiv <span aria-hidden="true">↗</span></a>
+    <a class="nav-paper" data-resource="arxiv" href="http://arxiv.org/abs/2610.19475">arXiv <span aria-hidden="true">↗</span></a>
   </nav>
 </header>
 <main id="top">
@@ -34,9 +34,9 @@
     <div class="authors" aria-label="Authors"><span>Yanshu Li<sup>1</sup></span><span>Ruixiang Tang<sup>2</sup></span><span>Junyi Jessy Li<sup>1</sup></span><span>Elias Stengel-Eskin<sup>1</sup></span></div>
     <p class="affiliations"><span><sup>1</sup> University of Texas at Austin</span><span><sup>2</sup> Rutgers University</span></p>
     <div class="hero-actions">
-      <a class="button primary" data-resource="arxiv" href=""><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6v18h12V7zM14 3v5h5M9 12h6M9 16h6"/></svg>arXiv</a>
-      <a class="button secondary" data-resource="code" href=""><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18"/></svg>Code</a>
-      <a class="button secondary" data-resource="huggingface" href=""><span aria-hidden="true">🤗</span>Hugging Face</a>
+      <a class="button primary" data-resource="Arxiv" href="http://arxiv.org/abs/2610.19475"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6v18h12V7zM14 3v5h5M9 12h6M9 16h6"/></svg>arXiv</a>
+      <a class="button secondary" data-resource="Github" href=""><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18"/></svg>Code</a>
+      <a class="button secondary" data-resource="HuggingFace" href="https://huggingface.co/papers/2610.19475"><span aria-hidden="true">🤗</span>Hugging Face</a>
       <a class="button secondary" href="#citation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5H6c-2 0-2 2-2 4s-1 3-2 3c1 0 2 1 2 3s0 4 2 4h2M16 5h2c2 0 2 2 2 4s1 3 2 3c-1 0-2 1-2 3s0 4-2 4h-2"/></svg>BibTeX</a>
     </div>
     <div class="hero-stats" aria-label="Research highlights">
@@ -101,13 +101,11 @@
     <div class="ablation-grid"><div><div class="chart-heading"><h3>Both training stages matter.</h3><span>Table 4</span></div><div id="ablation-bars"></div><p class="figure-note">Qwen3.5-9B, adaptive setting. Average score on MME-R, CharXiv, and MathVision. Bars use a shared 0–100 scale.</p></div><div class="findings"><article><span class="finding-number">−2.8<span> pp</span></span><div><h4>Goals need to evolve.</h4><p>Replacing the agent’s retrieval goals with a fixed query-based goal reduces the average score.</p></div></article><article><span class="finding-number">+2.2<span> pp</span></span><div><h4>Context use improves, too.</h4><p>With externally supplied contexts, ActICL outperforms LoRA on average across the evaluated ICL and interleaved image–text settings.</p></div></article></div></div>
   </div></section>
 
-  <section id="citation" class="section citation-section"><div class="shell"><div class="section-heading compact"><div><p class="eyebrow">05 / Citation</p><h2>Build on ActICL.</h2></div><button class="button secondary" id="copy-citation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h12v13H8zM16 8V3H3v13h5"/></svg><span>Copy BibTeX</span></button></div><pre id="bibtex">@misc{li2026acticl,
-  title = {ActICL: Post-Training for Agentic Multimodal
-           In-Context Learning},
-  author = {Li, Yanshu and Tang, Ruixiang and
-            Li, Junyi Jessy and Stengel-Eskin, Elias},
-  year = {2026},
-  note = {Preprint}
+  <section id="citation" class="section citation-section"><div class="shell"><div class="section-heading compact"><div><p class="eyebrow">05 / Citation</p><h2>Build on ActICL.</h2></div><button class="button secondary" id="copy-citation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h12v13H8zM16 8V3H3v13h5"/></svg><span>Copy BibTeX</span></button></div><pre id="bibtex">@article{li2026acticl,
+  title={ActICL: Post-Training for Agentic Multimodal In-Context Learning},
+  author={Li, Yanshu and Tang, Ruixiang and Li, Junyi Jessy and Stengel-Eskin, Elias},
+  journal={arXiv preprint arXiv:2610.19475},
+  year={2026}
 }</pre><p id="copy-status" class="sr-only" aria-live="polite"></p></div></section>
 </main>
 <footer class="shell footer"><a class="brand" href="#top"><img src="assets/mark.svg" width="28" height="28" alt=""><span>Act<span class="brand-light">ICL</span></span></a><p>Learn what to retrieve. Decide what to keep.</p><a href="#top">Back to top ↑</a></footer>
